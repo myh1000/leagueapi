@@ -2,33 +2,31 @@ var ID = "";
 $(document).ready(function(){
   $('#submitlookup').on('click', function(event){
     event.preventDefault();
-    ID = $("#userName").val();
-
+    ID = $("#summID").val();
 
     $.ajax({
-        url: "rosterPull", //rosterPull here refers to the C# method
+        url: "/myh1000.github.io/controllers/controller.cs", //rosterPull here refers to the C# method
         type: "POST",
-        data: "roster=" + ID,
+        data: {
+          roster: ID
+        },
         dataType: "json",
+        contentType: "application/json; charset=utf-8",
         success: function (resp) {
 
             json = JSON && JSON.parse(resp) || $.parseJSON(resp);
 
-            for (var i = 0; i < teamRoster.length; i++) {
-                teamRoster[i] = json[teamRoster[i]];
-            }
+            summonerLevel = json[userID].summonerLevel;
+            summonerID = json[userID].id;
 
-            updateWebSite();
+            document.getElementById("sLevel").innerHTML = summonerLevel;
+            document.getElementById("sID").innerHTML = summonerID;
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
             if (XMLHttpRequest.status == 0) {
-              alert("error getting Summoner data2!");
+              alert("error getting Summoner data!");
             }
         }
     });
   });
 });
-
-function updateWebSite() {
-
-}
