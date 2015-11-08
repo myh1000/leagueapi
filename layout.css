@@ -20,12 +20,10 @@ h1{
   width: auto;
 }
 
-/**
-/** for background image
-html {
+body {
   background: url(league_of_legends-vs-game-background-1600X900.jpg) no-repeat center center fixed;
  -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
  background-size: cover;
-} **/
+}
