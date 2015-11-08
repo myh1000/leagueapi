@@ -1,8 +1,11 @@
 body {
   padding-top: 70px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
+h1{
+  color: #E5F2FF;
+}
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
@@ -10,9 +13,19 @@ body {
 }
 
 .theme-showcase > p > .btn {
-  margin: 5px 0;
+  margin: 5px ;
 }
 
 .theme-showcase .navbar .container {
   width: auto;
 }
+
+/**
+/** for background image
+html {
+  background: url(league_of_legends-vs-game-background-1600X900.jpg) no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+} **/
