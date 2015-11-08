@@ -1,10 +1,9 @@
 var ID = "";
-var APIKEY = "";
+var APIKEY = "7cf51bc0-7417-4b55-8d08-b9eec244bbc4";
 $(document).ready(function(){
   $('#submitlookup').on('click', function(event){
      event.preventDefault();
     ID = $("#userName").val();
-    APIKEY = $("#theKey").val();
 
     if (ID !== "") {
 
